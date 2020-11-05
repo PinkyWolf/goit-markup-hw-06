@@ -14,7 +14,6 @@ body {
 
 /* Шапка */
 .header-container {
-  width: 
   margin-left: auto;
   margin-right: auto;
 }
@@ -45,10 +44,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*   outline: solid 5px tomato; */
   padding-top: 25px;
   padding-bottom: 25px;
-
 }
 .navigation-header {
   align-items: center;
@@ -60,9 +57,8 @@ body {
 .navigation-header .item:not(:last-child) {
   margin-right: 50px;
 }
-
-.link-decor :hover,
-.link-decor :focus {
+.item :hover,
+.item :focus {
   color: var(--primary-text-color);
 }
 .link-decor {
@@ -82,7 +78,7 @@ body {
   margin-left: 331px;
   align-items: center;
 }
-.nav-cont::before {
+.link-decor::before {
   content: "";
   width: 16px;
   height: 12px;
@@ -107,7 +103,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-  
+
   background-color: var(--primary-bg-color);
 }
 .main {
@@ -115,14 +111,15 @@ body {
   margin-right: auto;
   max-width: 1600px;
   height: 600px;
-  background-image: linear-gradient(to right,
-  rgba(47, 48, 58, 0.4),
-  rgba(47, 48, 58, 0.4)
-  ),
-  url(../images/Фон_героя.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Фон_героя.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding-top: 200px; 
+  padding-top: 200px;
 }
 .main-title {
   display: inline-block;
@@ -169,50 +166,41 @@ body {
   width: 100%;
 }
 .atributes {
-  /*   outline: solid 5px tomato; */
   display: flex;
   margin-right: auto;
   margin-left: auto;
   margin-top: 94px;
   margin-bottom: 94px;
-  height: 101px;
+  min-height: 101px;
   width: 1170px;
 
   list-style: none;
 }
-/* .list-item::before {
-  display: block;
-  content: '';
+.list-item {
+  margin-right: 30px;
+}
+.list-item:nth-child(4n) {
+  margin-right: 0px;
+}
+.art-icon {
+  width: 270px;
   height: 120px;
-  outline: 3px solid coral; */
-
-
+  background-color: #f5f4fa;
 }
 .atr-title {
-  font-weight: 700 ;
-  font-size: 14px ;
-  padding-bottom: 10px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
   text-transform: uppercase;
 }
 .atributes-text {
-  /*   outline: solid 5px gold; */
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  margin-right: 30px;
-}
-.atributes-text > span {
-  /*   outline: solid 5px tomato; */
-  width: 270px;
-  left: 815px;
-  top: 774px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 .container-gallery {
   margin-right: auto;
@@ -275,12 +263,38 @@ body {
 .flex-item {
   margin-right: 30px;
   height: 368px;
+  max-width: 270px;
 
   background-color: #fff;
   font-weight: 400;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  list-style: none;
+}
+.list-social-icons {
+  list-style: none;
+}
+.social-icons-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.social-icons {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-icons:hover {
+  background-color: #2196f3;
+}
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.social-icons-svg:hover {
+  fill: #fff;
 }
 .flex-item:nth-child(4n) {
   margin-right: 0;
@@ -300,7 +314,11 @@ body {
 
   color: var(--main-text-color);
 }
-
+.list-social-icons {
+  display: flex;
+  width: 44px;
+  height: 44px;
+}
 /* Параметри для сторінки Портфоліо */
 .filter-container {
   margin-right: auto;
@@ -447,4 +465,3 @@ body {
 .contacts-link {
   color: rgb(255, 255, 255, 0.6);
 }
-
