@@ -426,7 +426,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 1600px;
-  height: 374px;
+  height: 370px;
 }
 .clients-list {
   text-align: center;
@@ -472,6 +472,7 @@ body {
 /* Підвал сторінки */
 #contacts {
   display: flex;
+  height: 252px;
   width: 100%;
   background: var(--primary-bg-color);
 }
@@ -486,7 +487,6 @@ body {
   margin-left: auto;
 }
 .contacts {
-  /* padding-top: 60px; */
   list-style-type: none;
 }
 .contacts-title {
@@ -497,7 +497,6 @@ body {
   color: var(--primary-text-color);
 }
 .footer-title {
-  /* margin-top: 60px; */
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
