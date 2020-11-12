@@ -23,8 +23,6 @@ body {
   background: var(--third-text-color);
 }
 .title {
-  /*   outline: solid 5px tomato; */
-  padding: 25px 93px 25px 215px;
   margin-top: 50px;
 
   font-family: Raleway;
@@ -59,9 +57,11 @@ body {
 }
 .item {
   list-style-type: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.item :hover,
-.item :focus {
+.item .link-decor :hover,
+.item .link-decor :focus {
   color: var(--primary-text-color);
 }
 .nav-icon-svg {
@@ -78,6 +78,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-color);
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-decor:hover {
   color: var(--primary-text-color);
@@ -159,8 +162,13 @@ body {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-}
 
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-button:hover {
+  scale: 1.25;
+}
 /* Атрибути компанії */
 
 .atributes-container {
@@ -289,6 +297,8 @@ body {
 .social-icons {
   margin-right: 10px;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons:nth-child(4n) {
   margin-right: 0;
@@ -367,6 +377,9 @@ body {
 
   background: var(--secondary-bg-color);
   border-radius: 4px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter .filter-button + .filter-button {
   margin-left: 8px;
@@ -391,6 +404,9 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flex-cont-portf:nth-child(3n) {
   margin-right: 0px;
@@ -454,19 +470,24 @@ body {
   margin-right: 30px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cl-logo-link:hover {
   border-color: #2196f3;
 }
 .cl-logo-link:hover .cl-logo-svg {
-  border-color: #2196f3;
   fill: #2196f3;
+  border-color: #2196f3;
 }
 .cl-logo:nth-child(6n) {
   margin-right: 0;
 }
 
 .cl-logo-svg {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #afb1b8;
 }
 /* Підвал сторінки */
@@ -556,14 +577,6 @@ body {
 .social-icons-link:hover .social-icons-svg {
   color: #2196f3;
   fill: #ffffff;
-}
-.social-icons-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
 }
 .social-footer-svg {
   width: 20px;
