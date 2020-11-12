@@ -241,11 +241,31 @@ body {
   width: calc ((100% - 60px) / 3);
   list-style: none;
 }
-
 .img-gallery-1 {
   height: 294px;
   margin-right: 30px;
   object-fit: cover;
+}
+.gallery1-descr {
+  display: flex;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 85px;
+  width: 370px;
+  height: 70px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  color: var(--third-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+  transform: translateY(-100%);
 }
 .img-gallery-1:nth-child(3n) {
   margin-right: 0;
@@ -398,7 +418,12 @@ body {
   padding-right: 15px;
   list-style-type: none;
 }
+.project-card {
+  width: 370px;
+  height: 270px;
+}
 .flex-cont-portf {
+  position: relative;
   width: 370px;
   height: 404px;
   margin-right: 30px;
@@ -408,15 +433,60 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.flex-cont-portf::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+}
+.flex-cont-portf:hover:before,
+.flex-cont-portf:focus:before {
+  opacity: 1;
+
+  transform: translateY(0);
+}
 .flex-cont-portf:nth-child(3n) {
   margin-right: 0px;
 }
 .flex-cont-portf:nth-child(n + 7) {
   margin-bottom: 0px;
 }
-.flex-cont-portf:hover {
+.flex-cont-portf:hover,
+.flex-cont-portf:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.overlay-text {
+  display: block;
+  position: absolute;
+  top: 63px;
+  left: 24px;
+  right: 24px;
+  bottom: 63px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--third-text-color);
+
+  opacity: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay-text:hover,
+.overlay-text:focus {
+  opacity: 1;
 }
 .second-page-title {
   display: inline-block;
