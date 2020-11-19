@@ -13,6 +13,7 @@ body {
 }
 
 /* Шапка */
+
 .header-container {
   margin-left: auto;
   margin-right: auto;
@@ -39,6 +40,7 @@ body {
   color: var(--primary-text-color);
 }
 .page-header {
+  height: 79px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +99,7 @@ body {
   height: 4px;
   border-radius: 4px;
   position: absolute;
-  margin-top: 22px;
+  margin-top: 29px;
   background-color: var(--primary-text-color);
 }
 .nav-cont {
@@ -119,6 +121,7 @@ body {
 }
 
 /* Герой */
+
 .main-container {
   height: 600px;
   margin-left: auto;
@@ -178,7 +181,6 @@ body {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-
   transform: scale(1);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -197,7 +199,7 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  /* opacity: 1; */
+  opacity: 1;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -219,8 +221,8 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1) rotate(360deg);
-  transition-duration: 250ms;
+  transform: translate(-50%, -50%) scale(1) rotate3d(1, 1, 1, 360deg);
+  transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close {
@@ -243,7 +245,6 @@ body {
   outline: 0;
 }
 .modal-svg {
-  cursor: pointer;
   width: 11px;
   height: 11px;
   fill: #000000;
@@ -375,6 +376,7 @@ body {
 .submit:hover {
   transform: scale(0.9);
 }
+
 /* Атрибути компанії */
 
 .atributes-container {
@@ -444,7 +446,7 @@ body {
 }
 .gallery-1 {
   display: flex;
-  width: calc ((100% - 60px) / 3);
+  width: calc((100% - 60px) / 3);
   list-style: none;
 }
 .img-gallery-1 {
@@ -454,24 +456,23 @@ body {
 }
 .gallery1-descr {
   display: flex;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  padding-left: 85px;
+  min-height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
   width: 370px;
   height: 70px;
+  justify-content: center;
+
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  text-align: center;
-
   color: var(--third-text-color);
   background-color: rgba(47, 48, 58, 0.8);
-  transform: translateY(-100%);
+  transform: translateY(-104%);
 }
 .img-gallery-1:nth-child(3n) {
   margin-right: 0;
@@ -481,6 +482,7 @@ body {
 }
 
 /* Секція з командою */
+
 .our-team {
   margin-top: 94px;
   background: var(--secondary-bg-color);
@@ -513,6 +515,9 @@ body {
   border-radius: 0px 0px 4px 4px;
   list-style: none;
 }
+
+/* значки соц мереж */
+
 .social-icons-list {
   display: flex;
   padding-bottom: 30px;
@@ -529,9 +534,6 @@ body {
 .social-icons:nth-child(4n) {
   margin-right: 0;
 }
-/* .social-icons:hover {
-  background-color: #2196f3;
-} */
 .social-icons:nth-last-child(1n):hover,
 .social-icons-link:nth-last-child(1n):focus {
   background-color: #3f729b;
@@ -588,7 +590,9 @@ body {
 
   color: var(--main-text-color);
 }
+
 /* Параметри для сторінки Портфоліо */
+
 .filter-container {
   margin-right: auto;
   margin-left: auto;
@@ -639,8 +643,6 @@ body {
 
   transform: scale(0.9);
 }
-.our-projects {
-}
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -660,7 +662,6 @@ body {
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
 }
-
 .project-card {
   position: relative;
   width: 370px;
@@ -670,6 +671,9 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
+
+/* оверлей для карток з проектами на сторінці портфоліо */
+
 .project-card::before {
   display: inline-block;
   position: absolute;
@@ -739,6 +743,8 @@ body {
   padding-left: 24px;
   color: var(--main-text-color);
 }
+
+/* Cекція з клієнтами */
 
 .our-clients {
   display: flex;
