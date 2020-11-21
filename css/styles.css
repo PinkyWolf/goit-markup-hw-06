@@ -309,7 +309,11 @@ body {
   z-index: 10;
 }
 .input-svg:focus {
+<<<<<<< Updated upstream
   fill: currentColor;
+=======
+  fill: var(--primary-text-color);
+>>>>>>> Stashed changes
 }
 .form-lines:focus {
   border-color: var(--primary-text-color);

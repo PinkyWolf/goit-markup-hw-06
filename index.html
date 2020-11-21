@@ -21,16 +21,24 @@
           <ul class="nav-cont">
             <li class="item">
               <a class="link-decor" href="mailto:info@devstudio.com">
+<<<<<<< Updated upstream
                 <svg width="16" height="15"  class="nav-icon-svg">
+=======
+                <svg width="16" height="15" class="nav-icon-svg">
+>>>>>>> Stashed changes
                   <use href="./images/svg/symbol-defs.svg#icon-envelope"></use>
-                </svg> 
-                  <span>info@devstudio.com</span> 
-              </a> 
+                </svg>
+                <span>info@devstudio.com</span>
+              </a>
             </li>
             <li class="item">
               <a class="link-decor" href="tel:380961111111">
                 <svg width="16" height="16" class="nav-icon-svg">
+<<<<<<< Updated upstream
                 <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
+=======
+                  <use href="./images/svg/symbol-defs.svg#icon-smartphone"></use>
+>>>>>>> Stashed changes
                 </svg><span>+38 096 111 11 11</span>
               </a>
             </li>
@@ -401,27 +409,26 @@
     <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-      <form >
-        <label class="modal-name" for="user"><span class="modal-hint">Имя</span></label>
+      <form>
+        <label class="modal-name" for="user"><span class="modal-hint">Имя</span></label>  
             <svg width="12" height="12" class="input-svg">
               <use href="./images/svg/symbol-defs.svg#icon-name"></use>
             </svg>
-          <input class="form-lines" type="text" name="user" id="user"/>
-          
+          <input class="form-lines" type="text" name="user" id="user" pattern="^[А-Яа-яЁё\s]+$" required/>
         <label class="modal-name" for="phone"> <span class="modal-hint">Телефон</span></label>
             <svg width="13" height="13" class="input-svg">
               <use href="./images/svg/symbol-defs.svg#icon-phone"></use>
             </svg>
-          <input class="form-lines" type="tel" name="phone" id="phone"/>
+          <input class="form-lines" type="tel" name="phone" id="phone" pattern="[0-9]{12}"/>
           
         <label class="modal-name" for="email"> <span class="modal-hint">Почта</span></label>
             <svg width="15" height="12" class="input-svg">
               <use href="./images/svg/symbol-defs.svg#icon-mail"></use>
             </svg>
-          <input class="form-lines" type="email" name="email" id="email" />
+          <input class="form-lines" type="email" name="email" id="email" pattern="[A-Za-z]" required />
             
         <label class="modal-name" for="comment"> <span class="modal-hint2">Комментарий</span></label>
-          <textarea class="form-comments" name="comment" cols="30" rows="5" id="comment" ></textarea>
+          <textarea class="form-comments" name="comment" cols="30" rows="5" id="comment"  ></textarea>
         <label class="ch-name">
 
           <input class="checkbox" type="checkbox" name="check"/> 
