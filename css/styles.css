@@ -252,6 +252,7 @@ body {
 .modal-svg:hover {
   fill: var(--primary-text-color);
 }
+
 .modal-title {
   margin-top: 40px;
   margin-right: 40px;
@@ -289,15 +290,41 @@ body {
   color: var(--main-text-color);
 }
 .form-lines {
+  position: relative;
   width: 448px;
   height: 44px;
   margin-top: 30px;
+  padding-left: 45px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 10px;
   font-size: 18px;
   line-height: 40px;
   outline: 0;
+  z-index: 1;
 }
+.input-svg {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 46px;
+  z-index: 10;
+}
+.input-svg:focus {
+  fill: currentColor;
+}
+.form-lines:focus {
+  border-color: var(--primary-text-color);
+}
+.form-comments:focus {
+  border-color: var(--primary-text-color);
+}
+/* .form-lines:focus:valid {
+  border-color: green;
+  color: green;
+}
+.form-lines:focus:invalid {
+  border-color: red;
+  color: red;
+} */
 .form-comments {
   width: 448px;
   height: 120px;
@@ -307,6 +334,7 @@ body {
   font-size: 18px;
   line-height: 40px;
   outline: 0;
+  resize: none;
 }
 .modal-hint2 {
   position: absolute;
@@ -321,6 +349,7 @@ body {
 }
 .ch-name {
   position: relative;
+  padding-left: 18px;
 
   margin-top: 12px;
   margin-left: 40px;
@@ -333,7 +362,25 @@ body {
 }
 .checkbox {
   margin-top: 20px;
-  margin-right: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checkbox:checked + .svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/svg/checked.svg);
+}
+.checkbox:checked:focus + .svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/svg/checked.svg);
 }
 .ch-link {
   font-style: normal;
@@ -343,6 +390,14 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   text-decoration: underline;
+}
+.svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/svg/checkbox.svg);
 }
 .submit {
   display: block;
@@ -643,6 +698,10 @@ body {
 
   transform: scale(0.9);
 }
+.filter-button:enabled {
+  color: #ffffff;
+  background-color: var(--primary-text-color);
+}
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -810,7 +869,6 @@ body {
 }
 .footer-container {
   display: flex;
-  width: 1170px;
   justify-content: left;
   max-height: 146px;
   margin-top: 60px;
@@ -871,7 +929,7 @@ body {
 }
 .footer-join {
   display: inline-block;
-  padding-top: 12px;
+  padding-top: 10px;
   padding-left: 70px;
 }
 .footer-join-title {
@@ -879,9 +937,17 @@ body {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
+  letter-spacing: 0.06em;
   color: var(--third-text-color);
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+.footer-icons-list {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
 }
 .social-icons-list {
   display: flex;
@@ -905,4 +971,80 @@ body {
   width: 20px;
   height: 20px;
   fill: var(--third-text-color);
+}
+
+/* Підписка на сторінку */
+.commercial {
+  position: relative;
+  width: 570px;
+  height: 86px;
+  margin-left: 93px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.comm-form {
+  margin-top: 20px;
+}
+.commercial-title {
+  display: block;
+  height: 16px;
+  margin-top: 10px;
+  color: var(--third-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.commercial-form {
+  width: 358px;
+  height: 50px;
+  padding-left: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 0.8;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--third-text-color);
+}
+.commercial-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 52%;
+  right: 0%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 26px;
+  padding-right: 26px;
+  min-width: 200px;
+  min-height: 50px;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  background: var(--primary-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  outline: 0;
+
+  color: var(--third-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.commercial-button:hover {
+  transform: scale(0.9);
+}
+.send-svg {
+  margin-left: 10px;
+  height: 24px;
+  width: 24px;
 }
