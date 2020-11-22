@@ -386,9 +386,11 @@
           </ul>
          </div>
         <div class="commercial">
-          <b class="commercial-title">Подпишитесь на рассылку</b>
+          <label for="e-mail">
+            <b class="commercial-title">Подпишитесь на рассылку</b>
+          </label>
            <form class="comm-form" >
-             <input class="commercial-form" type="email" placeholder="E-mail">
+             <input class="commercial-form" type="email" placeholder="E-mail" id="e-mail" name="footer-email">
            </form>
           <button class="commercial-button" type="submit">Подписаться
             <svg width="24" height="24" class="send-svg">
@@ -403,27 +405,25 @@
       <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
       <form>
         <label class="modal-name" for="user"><span class="modal-hint">Имя</span></label>  
-            <svg width="12" height="12" class="input-svg">
-              <use href="./images/svg/symbol-defs.svg#icon-name"></use>
-            </svg>
           <input class="form-lines" type="text" name="user" id="user" pattern="^[А-Яа-яЁё\s]+$" required/>
+          <svg width="12" height="12" class="input-svg">
+            <use href="./images/svg/symbol-defs.svg#icon-name"></use>
+          </svg>
         <label class="modal-name" for="phone"> <span class="modal-hint">Телефон</span></label>
+          <input class="form-lines" type="tel" name="phone" id="phone" pattern="[0-9]{12}"/>
             <svg width="13" height="13" class="input-svg">
               <use href="./images/svg/symbol-defs.svg#icon-phone"></use>
             </svg>
-          <input class="form-lines" type="tel" name="phone" id="phone" pattern="[0-9]{12}"/>
-          
         <label class="modal-name" for="email"> <span class="modal-hint">Почта</span></label>
+          <input class="form-lines" type="email" name="email" id="email" pattern="[A-Za-z]" required />
             <svg width="15" height="12" class="input-svg">
               <use href="./images/svg/symbol-defs.svg#icon-mail"></use>
             </svg>
-          <input class="form-lines" type="email" name="email" id="email" pattern="[A-Za-z]" required />
-            
         <label class="modal-name" for="comment"> <span class="modal-hint2">Комментарий</span></label>
           <textarea class="form-comments" name="comment" cols="30" rows="5" id="comment"  ></textarea>
         <label class="ch-name">
 
-          <input class="checkbox" type="checkbox" name="check"/> 
+          <input class="checkbox" type="checkbox" name="check" /> 
            <span class="svg"></span>
            Соглашаюсь с рассылкой и принимаю <a href="" class="ch-link"> Условия договора </a>
           </label> 

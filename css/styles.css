@@ -221,7 +221,7 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1) rotate3d(1, 1, 1, 360deg);
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -292,28 +292,27 @@ body {
 .form-lines {
   position: relative;
   width: 448px;
-  height: 44px;
+  height: 40px;
   margin-top: 30px;
   padding-left: 45px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 10px;
   font-size: 18px;
-  line-height: 40px;
+  line-height: 2.2;
   outline: 0;
   z-index: 1;
 }
 .input-svg {
   position: absolute;
-  margin-left: 15px;
-  margin-top: 46px;
+  left: 0;
+  margin-left: 55px;
+  margin-top: 44px;
   z-index: 10;
+  transform: ;
 }
-.input-svg:focus {
-<<<<<<< Updated upstream
-  fill: currentColor;
-=======
+.form-lines:focus + .input-svg {
   fill: var(--primary-text-color);
->>>>>>> Stashed changes
+  color: var(--primary-text-color);
 }
 .form-lines:focus {
   border-color: var(--primary-text-color);
@@ -332,6 +331,10 @@ body {
 .form-comments {
   width: 448px;
   height: 120px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-top: 30px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 10px;
@@ -352,11 +355,9 @@ body {
   color: var(--main-text-color);
 }
 .ch-name {
+  display: flex;
   position: relative;
-  padding-left: 18px;
-
-  margin-top: 12px;
-  margin-left: 40px;
+  justify-content: center;
 
   font-weight: 400;
   font-size: 14px;
@@ -396,9 +397,8 @@ body {
   text-decoration: underline;
 }
 .svg {
-  position: absolute;
-  left: 0;
-  top: 0;
+  margin-top: 4px;
+  margin-right: 8px;
   width: 16px;
   height: 15px;
   background-image: url(../images/svg/checkbox.svg);
