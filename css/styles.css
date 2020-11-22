@@ -372,17 +372,19 @@ body {
   appearance: none;
 }
 .checkbox:checked + .svg {
-  position: absolute;
-  left: 0;
-  top: 0;
+  margin-top: 4px;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
   width: 16px;
   height: 15px;
   background-image: url(../images/svg/checked.svg);
 }
 .checkbox:checked:focus + .svg {
-  position: absolute;
-  left: 0;
-  top: 0;
+  margin-top: 4px;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
   width: 16px;
   height: 15px;
   background-image: url(../images/svg/checked.svg);
