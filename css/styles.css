@@ -397,7 +397,7 @@ body {
   height: 15px;
   width: 16px;
   height: 15px;
-  background-image: url(../images/svg/checkbox-focused.svg);
+  background-image: url(../images/svg/checked.svg);
 }
 .ch-link {
   font-style: normal;
@@ -713,10 +713,6 @@ body {
   background-color: var(--primary-text-color);
 
   transform: scale(0.9);
-}
-.filter-button:enabled {
-  color: #ffffff;
-  background-color: var(--primary-text-color);
 }
 .project-list {
   display: flex;
@@ -1064,3 +1060,4 @@ body {
   height: 24px;
   width: 24px;
 }
+
