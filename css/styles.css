@@ -381,6 +381,15 @@ body {
   height: 15px;
   background-image: url(../images/svg/checked.svg);
 }
+.checkbox:focus + .svg {
+  margin-top: 4px;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/svg/checkbox-focused.svg);
+}
 .checkbox:checked:focus + .svg {
   margin-top: 4px;
   margin-right: 8px;
@@ -388,7 +397,7 @@ body {
   height: 15px;
   width: 16px;
   height: 15px;
-  background-image: url(../images/svg/checked.svg);
+  background-image: url(../images/svg/checkbox-focused.svg);
 }
 .ch-link {
   font-style: normal;
